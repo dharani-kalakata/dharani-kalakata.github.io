@@ -1,0 +1,38 @@
+@media (min-width: 768px) {
+  .customHeading {
+    font-size: 60px;
+  }
+}
+
+@media (min-width: 768px) {
+  .CustomPara {
+    font-size: 20px;
+  }
+}
+
+@media (min-width: 576px) {
+  .customHeading {
+    font-size: 45px;
+  }
+}
+
+@media (min-width: 370px) {
+  .CustomPara {
+    font-size: 20px;
+  }
+}
+
+@media (min-width: 576px) {
+  .CustomPara {
+    font-size: 20px;
+  }
+}
+
+.le {
+  float: right;
+}
+
+.tech {
+  --bs-gutter-y: 1.5rem;
+}
+

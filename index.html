@@ -1,117 +1,108 @@
-<!doctype html>
-<html lang="en">
-  <head>
+<!DOCTYPE html>
+<html data-bs-theme="light" lang="en">
+
+<head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>demo</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
-  </head>
-  <body>
-    <div class="container-fluid">
-    <nav class="navbar bg-body-tertiary">
-        <div class="container-fluid">
-          <span class="navbar-text">
-            &#x270D; How i Implemented Locally!
-          </span>
-        </div>
-      </nav>
-    </div class="shadow-none p-3 mb-5 bg-body-tertiary rounded">
-    <div class="card" >
-        <p class="card-text">Layout</p>
-        
-        <div class="card-body">
-            <img src="assets\layout.png" class="card-img-top" alt="...">
-            
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Untitled</title>
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Work+Sans:300,400,500,600,700&amp;display=swap">
+    <link rel="stylesheet" href="assets/fonts/fontawesome-all.min.css">
+    <link rel="stylesheet" href="assets/css/Articles-Cards-images.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+
+<body style="--bs-primary: #1c3dca;--bs-primary-rgb: 28,61,202;--bs-info: #02aaff;--bs-info-rgb: 2,170,255;--bs-dark: #131416;--bs-dark-rgb: 19,20,22;">
+    <div data-bss-parallax-bg="true" style="height: 600px;background-image: url(&quot;assets/img/actual1.png&quot;);background-position: center;background-size: cover;">
+        <div class="container d-flex flex-column justify-content-end align-items-start justify-content-sm-end align-items-sm-start" style="height: 70%;max-width: 960px;">
+            <h1 class="customHeading" style="color: var(--bs-body-bg);padding-right: 0px;margin-right: 4px;font-weight: bold;font-family: 'Work Sans', sans-serif;">Eswar Kalakata</h1>
+            <p class="CustomPara" style="color: rgb(51,133,215);/*font-size: 26px;*/margin-top: -14px;padding: 2px;padding-bottom: 0px;font-family: 'Work Sans', sans-serif;">Full Stack Developer</p>
         </div>
     </div>
-
-    </div class="shadow-none p-3 mb-5 bg-body-tertiary rounded">
-    <div class="card" >
-        <p class="card-text">Step 1</p>
-        
-        
-        <div class="card-body">
-            <ul>
-                <li>Gathering the details of change request ( Based on that we can trigger job to check reboot status) </li>
-                <li>Utilized Heroku cloud to deploy RESTful API which provides CR data ( In our case it can be SNOW ticket or web scrapping tool )</li>
-                <li><p><a href="https://eswar-cr-data-api-6eeabc3abc0d.herokuapp.com/" class="link-success link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover">Access API</a></p></li>
-                <li>Here in below screenShot, we are utilizing the Api to Trigger the job</li>
-            </ul>
-            <img src="assets\step1.png" class="card-img-top" alt="...">
-        </div>
-
-    </div>
-
-    </div class="shadow-none p-3 mb-5 bg-body-tertiary rounded">
-    <div class="card">
-        <p class="card-text">Step 2</p>
-        
-    
-        
-        <div class="card-body">
-            <ul>
-                <li>Here from the local machine we user Invoke-Command used to connect to remote Server</li>
-                <div class="card">
-                    <div class="card-body">
-                        <code>Invoke-Command -ComputerName "localhost" -Credential $Credential -ScriptBlock {
-                            Get-Date
-                        }</code>
+    <main>
+        <section class="py-4 py-xl-5" style="background: #141212;color: #1b1d1f;">
+            <div class="container">
+                <p class="fs-3" style="color: var(--bs-body-bg);font-family: 'Work Sans', sans-serif;">I'm Eswar, an experienced developer in Python, React.js, Azure, and MongoDB, passionate about front-end experiences and digital innovation. I'm eager to contribute to your team's success.</p>
+                <ul class="list-inline mb-0" style="color: rgb(192,197,201);">
+                    <li class="list-inline-item"><i class="fab fa-linkedin-in fs-1 me-2"></i></li>
+                    <li class="list-inline-item"><i class="fab fa-github-alt fs-1 me-2"></i></li>
+                    <li class="list-inline-item"><i class="fab fa-instagram fs-1 me-2"></i></li>
+                    <li class="list-inline-item"></li>
+                </ul>
+            </div>
+        </section>
+        <section>
+            <div class="row row-cols-1 row-cols-md-2 row-cols-xl-4 py-3 px-3" style="background: var(--bs-emphasis-color);font-family: 'Work Sans', sans-serif;">
+                <div class="col">
+                    <div class="card"><img class="card-img-top w-100 d-block fit-cover" style="height: 400px;" src="assets/img/f.png">
+                        <div class="card-body p-4" style="background: #141212;">
+                            <h4 class="card-title" style="color: var(--bs-body-bg);">Front-End</h4>
+                            <p class="card-text" style="color: var(--bs-body-bg);">My preferred tools for code editing, data analysis exploration, code analysis, and debugging</p>
+                        </div>
                     </div>
                 </div>
-                <li> Script Block is where Actual function goes, which return the data in below format </li>
-                <div class="card-body">
-                    <code>
-                        Result: { Succeeded
-                        Date: 08/08/2023 01:01:47
-                        Title: Security Intelligence Update for Microsoft Defender Antivirus - KB2267602 (Version 1.393.2546.0)
-                        SupportUrl: https://go.microsoft.com/fwlink/?LinkId=52661       
-                        Product: Microsoft Defender Antivirus
-                        UpdateId: fc66794d-1c6a-4f45-92d2-d74d3376bbdc
-                        RevisionNumber: 200
-                        LastBootTimeFormatted: 08/27/2023 20:21:22
-                    }</code>
+                <div class="col">
+                    <div class="card"><img class="card-img-top w-100 d-block fit-cover" style="height: 400px;" src="assets/img/b.png">
+                        <div class="card-body p-4" style="background: #141212;color: var(--bs-body-bg);">
+                            <h4 class="card-title">Back-End</h4>
+                            <p class="card-text">My preferred technologies for back-end web programming and database architecture.</p>
+                        </div>
+                    </div>
                 </div>
-
-            </ul>   
-        
-            
+                <div class="col">
+                    <div class="card"><img class="card-img-top w-100 d-block fit-cover" style="height: 400px;" src="assets/img/t.png">
+                        <div class="card-body p-4" style="background: #141212;color: var(--bs-body-bg);">
+                            <h4 class="card-title">Tools</h4>
+                            <p class="card-text">My preferred tools for code editing, data analysis exploration, code analysis, and debugging</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card"><img class="card-img-top w-100 d-block fit-cover" style="height: 400px;" src="assets/img/cl.png">
+                        <div class="card-body p-4" style="background: #141212;color: var(--bs-body-bg);">
+                            <h4 class="card-title">Platforms </h4>
+                            <p class="card-text">My preferred tools for code editing, data analysis exploration, code analysis, and debugging</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section style="background: #060505;">
+            <h1 style="color: rgb(51,133,215);font-family: 'Work Sans', sans-serif;">Work Experience</h1>
+            <div class="row py-5">
+                <div class="col" style="background: var(--bs-emphasis-color);">
+                    <div class="card" style="background: #141212;color: var(--bs-body-bg);font-family: 'Work Sans', sans-serif;">
+                        <div class="card-body">
+                            <h4 class="card-title" style="color: var(--bs-body-bg);">System Engineer</h4>
+                            <p> Tata Consultancy Services (TCS)&nbsp;<svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-pin-map" style="color: rgb(51,133,215);">
+                                    <path fill-rule="evenodd" d="M3.1 11.2a.5.5 0 0 1 .4-.2H6a.5.5 0 0 1 0 1H3.75L1.5 15h13l-2.25-3H10a.5.5 0 0 1 0-1h2.5a.5.5 0 0 1 .4.2l3 4a.5.5 0 0 1-.4.8H.5a.5.5 0 0 1-.4-.8l3-4z"></path>
+                                    <path fill-rule="evenodd" d="M8 1a3 3 0 1 0 0 6 3 3 0 0 0 0-6zM4 4a4 4 0 1 1 4.5 3.969V13.5a.5.5 0 0 1-1 0V7.97A4 4 0 0 1 4 3.999z"></path>
+                                </svg> Bengaluru&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span class="le" style="color: rgb(51,133,215);">May '21 - Present</span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</p>
+                            <p class="card-text">Extensive experience leveraging Python and React technologies to manage web applications and their resources, alongside ticket management and database administration within Azure services. Demonstrated expertise in identifying and resolving Azure ADF pipeline issues, ensuring smooth data integration</p>
+                        </div>
+                        <div class="card-body">
+                            <h4 class="card-title" style="color: var(--bs-body-bg);">Associate python developer</h4>
+                            <p>MapRecruit&nbsp;&nbsp;<svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-pin-map" style="color: rgb(51,133,215);">
+                                    <path fill-rule="evenodd" d="M3.1 11.2a.5.5 0 0 1 .4-.2H6a.5.5 0 0 1 0 1H3.75L1.5 15h13l-2.25-3H10a.5.5 0 0 1 0-1h2.5a.5.5 0 0 1 .4.2l3 4a.5.5 0 0 1-.4.8H.5a.5.5 0 0 1-.4-.8l3-4z"></path>
+                                    <path fill-rule="evenodd" d="M8 1a3 3 0 1 0 0 6 3 3 0 0 0 0-6zM4 4a4 4 0 1 1 4.5 3.969V13.5a.5.5 0 0 1-1 0V7.97A4 4 0 0 1 4 3.999z"></path>
+                                </svg> Hyderabad<span class="le" style="color: rgb(51,133,215);">Oct '20 - May '21</span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</p>
+                            <p class="card-text">Skilfully maintained and updated a product's skills database current, drawing data from multiple sources. Employed Selenium for building automation scripts in various recruitment portals and integrated Elasticsearch to enhance search capabilities within Flask-based RESTful APIs APIs. Additionally, engaged in the development of a diverse range of ML models.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <section class="py-4 py-xl-5" style="background: rgb(51,133,215);">
+        <div class="container">
+            <div class="banner">
+                <p class="fs-1" style="font-family: 'Work Sans', sans-serif;">I am presently open for employment opportunities.</p>
+                <a href="assets/img/cv.pdf" download="Eswar_resume.pdf" class="btn btn-dark btn-lg text-uppercase fw-bold" style="font-family: 'Work Sans', sans-serif;">Hire me&nbsp;<i class="fas fa-download"></i></a>
+            </div>
         </div>
+    </section>
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="assets/js/bs-init.js"></script>
+</body>
 
-    
-    </div>
-
-    </div class="shadow-none p-3 mb-5 bg-body-tertiary rounded">
-    <div class="card" >
-        <p class="card-text">Step 3</p>
-       
-        
-    <div class="card-body">
-        <ul>
-            <li>Azure Key Vault is configured to store the Credentials of Remote server</li>
-            <li>Below is Screenshot demonstrates how to retrieve the credentials </li>
-        </ul>
-        <img src="assets\step3.png" class="card-img-top" alt="...">
-        
-    </div>
-
-    </div class="shadow-none p-3 mb-5 bg-body-tertiary rounded">
-    <div class="card" style="width: 50rem;">
-        <p class="card-text">Step 4</p>
-       
-       
-    <div class="card-body">
-
-        <ul>
-            <li> Remote Windows server Deployed In Azure </li>
-        </ul>
-        <img src="assets\azureVm.png" class="card-img-top" alt="...">
-        
-    </div>
-        
-  
-      
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
-
-    </div>
-  </body>
 </html>
