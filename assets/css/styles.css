@@ -36,3 +36,20 @@
   --bs-gutter-y: 1.5rem;
 }
 
+
+.work {
+    --bs-gutter-y: 1.5rem;
+  }
+  
+  
+
+
+.parallax-bg {
+  background-image: url("assets/img/actual1.png");
+}
+
+@media (max-width: 412px) {
+  .parallax-bg {
+    background-image: url("assets/img/mobile.png");
+  }
+}
